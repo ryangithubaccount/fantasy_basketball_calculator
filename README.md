@@ -24,7 +24,7 @@ average. For players with less than 5 years in the league, their next-year score
 the mean score of similarly scoring players, and 30% weight to the league-average.
 
 Since the progression was based on percent change from year to year, the calculations were based on a player's scoring from their most recent year in the league. 
-However, for cases where there was significant drop or increase in performance (most likely due to anomolous situations such as injury or suspension) the last year
+However, for cases where there was significant drop or increase in performance (most likely due to anomalous situations such as injury or suspension) the last year
 score was calculated with a 60% weight to the last year and 40% weight to the year before that.
 
 ## Implementation
