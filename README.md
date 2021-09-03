@@ -28,5 +28,4 @@ However, for cases where there was significant drop or increase in performance (
 score was calculated with a 60% weight to the last year and 40% weight to the year before that.
 
 ## Implementation
-These calculations were published in a web app at 'xiaoda.pythonanywhere.com'. The files for the web pages can be found in '/templates' which holds a collection
-of html files. They were implemented using 'flask_app.py'.
+These calculations were published in a web app at 'fantasybasketballcalculator.pythonanywhere.com'. The files for the web pages can be found in templates/ which holds a collection of html files. The functions and templates were rendered using 'flask_app.py'.
