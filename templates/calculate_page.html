@@ -1,0 +1,111 @@
+<html>
+    <style>
+        .column {
+          float: left;
+          padding: 20px;
+          text-align: center;
+        }
+        .row {
+            color: #505050;
+            padding: 10px;
+        }
+        .div {
+            border-width: thin;
+        }
+        .body {
+            padding:0;
+            margin:0;
+        }
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <title>Fantasy Basketball Calculator</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Fantasy Basketball Calculator</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <h1>
+                <b>Projections Based on Inputted Scoring System</b>
+            </h1>
+            <div class="row">
+                <div class="column">
+                    <h4>
+                        Last Year Rankings (Top 120)
+                    </h4>
+                    {%for i in range(120)%}
+                        <div class="row">
+                            <b>{{i + 1}}. {{predictions[1][i][0]}} </b>
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="column">
+                    <h4>
+                        This Year's Projections (Top 120)
+                    </h4>
+                    {%for i in range(120)%}
+                        <div class="row">
+                            <b>{{i + 1}}. {{predictions[0][i][0]}}</b>
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="column">
+                    <h4>
+                        Change in Placement
+                    </h4>
+                    {%for i in range(120)%}
+                        <div class="row">
+                            <b>{{predictions[0][i][3]}}</b>
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="column">
+                    <h4>
+                        Top Gainers
+                    </h4>
+                    {%for i in range(5)%}
+                        <div class="row">
+                            <b>{{predictions[2][i][0]}} ({{predictions[2][i][3]}})</b>
+                        </div>
+                    {%endfor%}
+                    <h4>
+                        Top Losers
+                    </h4>
+                    {%for i in range(5)%}
+                        <div class="row">
+                            <b>{{predictions[3][i][0]}} ({{predictions[3][i][3]}})</b>
+                        </div>
+                    {%endfor%}
+                    <div class="row">
+                        Please take a moment to fill out a <a href="https://docs.google.com/forms/d/e/1FAIpQLSebknCu4jQcYwug3uFa3Ezzwdx8G_J6TcKRl3IOuhu6QXWxpA/viewform?usp=pp_url">feeback form</a>.<br>
+                        It takes less than a minute and helps<br> improve the site and user experience. <br>Good luck in your fantasy endeavors!
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <form action="." method="POST">
+                    <input type="submit" class="btn btn-success" value="Back to Home Page" name='scoring-choice'>
+                </form>
+            </div>
+        </div><!-- /.container -->
+    </body>
+</html>

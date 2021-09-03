@@ -1,0 +1,58 @@
+<html>
+    <style>
+        .column {
+          float: left;
+          padding: 20px;
+          text-align: left;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <title>Fantasy Basketball Calculator</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Fantasy Basketball Calculator</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div class="row">
+                <b>Custom Scoring</b>
+            </div>
+            <div class="row">
+                <b>Points per Stat</b>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <form action="." method="POST">
+                        <div class="row">
+                            {%for i in range(num_stats)%}
+                                <label><b>{{stat_names[i]}}: </b></label>
+                                <textarea rows="1" cols="1" class="form-control" name="contents_{{i}}" placeholder="0"></textarea>
+                                <input type="hidden" name="default_{{i}}_contents" value="0"></input>
+                            {%endfor%}
+                        </div>
+                        <input type="submit" class="btn btn-success" value="Default" name='scoring-choice'>
+                        <input type="submit" class="btn btn-success" value="Calculate (Will take a few seconds)" name='scoring-choice'>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </body>
+</html>
