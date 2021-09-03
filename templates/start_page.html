@@ -1,0 +1,59 @@
+<html>
+    <style>
+        .row {
+          padding: 20px;
+          font-size: 17.5px;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <title>Fantasy Basketball Calculator</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Fantasy Basketball Calculator</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div class="row">
+                Welcome to Fantasy Basketball Calculator! Our goal is to provide accurate fantasy basketball draft projections through mathematical
+                analysis. Currently, the application only supports scoring for points leagues, with goals of incorporating category leagues in the future.
+                To generate predictions, the system functions on a few fundamental concepts:<br>
+                <br>
+                &emsp;1. Player output calculated from both per-game averages and total season fantasy points. The best ability is availability!<br>
+                &emsp;2. Average year-to-year progressions of player output collected over the last 20 years.<br>
+                &emsp;3. Player progress correlations: matching players' progress and using close matches to predict next year's output (used more heavily for players with more years in the league).<br>
+                &emsp;4. Average next year score based on players who had similar output at the given player's age (used more heavily for players with fewer years in the league).<br>
+                <br>
+                All stats were collected from <a href="https://www.basketball-reference.com/">Basketball Reference</a><br>
+                To read a more detailed documentation of the calculations <a href="https://github.com/ryangithubaccount/fantasy_basketball_calculator/blob/main/README.md">click here</a>.<br>
+                To access the source code <a href="https://github.com/ryangithubaccount/fantasy_basketball_calculator">click here</a>.<br>
+                <br>
+                Choose your scoring system: Custom or default (ESPN)<br><br>
+                <div class="column">
+                    <form action="." method="POST">
+                        <input type="submit" class="btn btn-success" value="Custom" name='scoring-choice'>
+                        &emsp;
+                        <input type="submit" class="btn btn-success" value="Default" name='scoring-choice'>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </body>
+</html>
