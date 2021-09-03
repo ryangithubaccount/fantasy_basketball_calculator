@@ -36,16 +36,18 @@
                 analysis. Currently, the application only supports scoring for points leagues, with goals of incorporating category leagues in the future.
                 To generate predictions, the system functions on a few fundamental concepts:<br>
                 <br>
-                &emsp;1. Player output calculated from both per-game averages and total season fantasy points. The best ability is availability!<br>
-                &emsp;2. Average year-to-year progressions of player output collected over the last 20 years.<br>
-                &emsp;3. Player progress correlations: matching players' progress and using close matches to predict next year's output (used more heavily for players with more years in the league).<br>
-                &emsp;4. Average next year score based on players who had similar output at the given player's age (used more heavily for players with fewer years in the league).<br>
+                1. Player output calculated from both per-game averages and total season fantasy points. The best ability is availability!<br>
+                2. Average year-to-year progressions of player output collected over the last 20 years.<br>
+                3. Player progress correlations: matching players' progress and using close matches to predict next year's output (used more heavily for players with more years in the league).<br>
+                4. Average next year score based on players who had similar output at the given player's age (used more heavily for players with fewer years in the league).<br>
                 <br>
+                Important note: since there is no NBA data available for incoming rookies, they are not included in the predictions.
+                <br><br>
                 All stats were collected from <a href="https://www.basketball-reference.com/">Basketball Reference</a><br>
                 To read a more detailed documentation of the calculations <a href="https://github.com/ryangithubaccount/fantasy_basketball_calculator/blob/main/README.md">click here</a>.<br>
                 To access the source code <a href="https://github.com/ryangithubaccount/fantasy_basketball_calculator">click here</a>.<br>
                 <br>
-                Choose your scoring system: Custom or default (ESPN)<br><br>
+                Choose your scoring system: Custom or default (ESPN)<br>
                 <div class="column">
                     <form action="." method="POST">
                         <input type="submit" class="btn btn-success" value="Custom" name='scoring-choice'>
