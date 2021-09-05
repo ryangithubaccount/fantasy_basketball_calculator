@@ -81,7 +81,11 @@ def calculate_overall_scores(point_system):
                 prev = scores[j - 1][-1]
                 curr = scores[j][-1]
                 if prev and curr:
-                    score_changes[j].append((curr - prev) / prev)
+                    score_change = (curr - prev) / prev
+                    if abs(score_change) < 5:
+                        score_changes[j].append(score_change)
+                    else:
+                        score_changes[j].append(float("NaN"))
                 else:
                     score_changes[j].append(float("NaN"))
         i += 1
