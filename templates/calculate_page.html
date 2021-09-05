@@ -2,19 +2,12 @@
     <style>
         .column {
           float: left;
-          padding: 20px;
-          text-align: center;
+          padding: 15px;
+          text-align: left;
         }
         .row {
             color: #505050;
-            padding: 10px;
-        }
-        .div {
-            border-width: thin;
-        }
-        .body {
-            padding:0;
-            margin:0;
+            padding: 15px;
         }
     </style>
 
@@ -47,10 +40,10 @@
             <h1>
                 <b>Projections Based on Inputted Scoring System</b>
             </h1>
-            <div class="row">
-                <div class="column">
+            <div class="column" style="border:border-width:2.5px; border-style:double;">
+                <div class = "column">
                     <h4>
-                        Last Year Rankings (Top 120)
+                        2020-2021 Rankings (Top 120)
                     </h4>
                     {%for i in range(120)%}
                         <div class="row">
@@ -58,26 +51,20 @@
                         </div>
                     {%endfor%}
                 </div>
+            </div>
+            <div class="column" style="border:#ffc800; border-width:2.5px; border-style:double;">
                 <div class="column">
                     <h4>
-                        This Year's Projections (Top 120)
+                        2021-2022 Projections (Top 120)
                     </h4>
                     {%for i in range(120)%}
                         <div class="row">
-                            <b>{{i + 1}}. {{predictions[0][i][0]}}</b>
+                            <b>{{i + 1}}. {{predictions[0][i][0]}} ({{predictions[0][i][3]}})</b>
                         </div>
                     {%endfor%}
                 </div>
-                <div class="column">
-                    <h4>
-                        Change in Placement
-                    </h4>
-                    {%for i in range(120)%}
-                        <div class="row">
-                            <b>{{predictions[0][i][3]}}</b>
-                        </div>
-                    {%endfor%}
-                </div>
+            </div>
+            <div class="column" style="border: border-width:2.5px; border-style:double;">
                 <div class="column">
                     <h4>
                         Top Gainers
@@ -87,6 +74,8 @@
                             <b>{{predictions[2][i][0]}} ({{predictions[2][i][3]}})</b>
                         </div>
                     {%endfor%}
+                </div>
+                <div class="column">
                     <h4>
                         Top Losers
                     </h4>
@@ -95,16 +84,16 @@
                             <b>{{predictions[3][i][0]}} ({{predictions[3][i][3]}})</b>
                         </div>
                     {%endfor%}
-                    <div class="row">
-                        Please take a moment to fill out a <a href="https://docs.google.com/forms/d/e/1FAIpQLSebknCu4jQcYwug3uFa3Ezzwdx8G_J6TcKRl3IOuhu6QXWxpA/viewform?usp=pp_url">feeback form</a>.<br>
-                        It takes less than a minute and helps<br> improve the site and user experience. <br>Good luck in your fantasy endeavors!
-                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <form action="." method="POST">
-                    <input type="submit" class="btn btn-success" value="Back to Home Page" name='scoring-choice'>
-                </form>
+                <div class="row">
+                    Please take a moment to fill out a <a href="https://docs.google.com/forms/d/e/1FAIpQLSebknCu4jQcYwug3uFa3Ezzwdx8G_J6TcKRl3IOuhu6QXWxpA/viewform?usp=pp_url" target="_blank">feeback form</a>.<br>
+                    It takes less than a minute and helps<br> improve the site and user experience. <br>Good luck in your fantasy endeavors!
+                </div>
+                <div class="row">
+                    <form action="." method="POST">
+                        <input type="submit" class="btn btn-success" value="Back to Home Page" name='scoring-choice'>
+                    </form>
+                </div>
             </div>
         </div><!-- /.container -->
     </body>
