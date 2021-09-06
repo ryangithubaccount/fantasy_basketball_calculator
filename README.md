@@ -64,6 +64,10 @@ score was calculated with a 60% weight to the last year and 40% weight to the ye
 ## Implementation
 These calculations were published in a web app at 'fantasybasketballcalculator.pythonanywhere.com'. The files for the web pages can be found in templates/ which holds a collection of HTML files. The functions and templates were rendered using 'flask_app.py'.
 
+## Future Goals
+Currently, the web application only supports fantasy projections for "points" leagues. The objective is to expand this to include the other major fantasy league type, "category" leagues. To do so, the analysis files will be revamped to include a more comprehensive scoring system that incorporates elements of both points and category leagues.
+An additional goal is to incorporate greater use of CSS into the HTML files such that the web application appears more professional and interactive. Hopefully, greater use of graphics and/or web design can be applied.
+
 ## Tools Used
 Beautiful Soup, Pandas, Flask, and PythonAnywhere were all used to make the web app. They were used to web scrape, process data, and convert the original python
 code into a workable app.
