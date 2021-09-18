@@ -1,4 +1,4 @@
-# <a href="fantasybasketballcalculator.pythonanywhere.com">Fantasy Basketball Calculator</a>
+# <a href="https://fantasybasketballcalculator.pythonanywhere.com/">Fantasy Basketball Calculator</a>
 A math-based fantasy basketball project designed to generate predictions of next year's players.
 
 ## Functions and Usage
